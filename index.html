@@ -12,6 +12,12 @@
     height: 28px;
     width: 357px;
 }
+#dynamic3 {
+    font-size: 15px;
+    height: 28px;
+    width: 357px;
+}
+
 </style>
 
 <script>
@@ -20,10 +26,19 @@
            path:"ZeroClipboard.swf",
            copy:function(){return $("input#dynamic").val();}
         });
+	    $("#dynamic3").zclip({
+           path:"ZeroClipboard.swf",
+           copy:function(){return $("input#dynamic3").val();}
+        });
 		$("a#copy-dynamic1").zclip({
            path:"ZeroClipboard.swf",
            copy:function(){return $("textarea#dynamic1").val();}
         });
+		$("#dynamic2").zclip({
+           path:"ZeroClipboard.swf",
+           copy:function(){return $("textarea#dynamic2").val();}
+        });
+
     });
 </script>
   </head>
@@ -32,7 +47,9 @@
 
 <input type="text" id="dynamic" value="this is the text in input type" />
 <a href="#copy" id="copy-dynamic">Copy Now</a><br /><br />
+<input type="text" id="dynamic3" value="this is the text in input type2" /><br /><br />
 <textarea id="dynamic1">This is the text in text area</textarea>
-<a href="#copy" id="copy-dynamic1">Copy this too</a>
+<a href="#copy" id="copy-dynamic1">Copy this too</a><br /><br />
+<textarea id="dynamic2">This is the text in text area2</textarea>
 </body>
 </html>
